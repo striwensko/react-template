@@ -1,4 +1,5 @@
 import "App.css";
+import Button from "Button.react";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         >
           Learn React
         </a>
+        <Button label={"Click"} />
       </header>
     </div>
   );

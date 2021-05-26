@@ -118,3 +118,50 @@ Now with Github Actions installed we can make sure that we run checks on the
 code we are committing when we make a mistake if we view the commit we can see 
 the error popout with a UI similar to this:
 ![image](https://user-images.githubusercontent.com/4765784/119687623-3693db80-bdfc-11eb-813a-8684f896c380.png)
+
+Configure your github repo to prevent pushing directly to main and also to force
+all checks must past before been able to merge code into main.
+
+### Install Craco
+
+Craco will allow to may changes into react-script ecosystem without using eject.
+
+npm install @craco/craco
+
+update on package json the builds from react-scripts to craco
+```
+    "start": "craco start",
+    "build": "craco build",
+    "test": "craco test",
+    "eject": "craco eject",
+```
+
+Create Craco config file (craco.config.js)
+```
+const {ESLINT_MODES} = require("@craco/craco");
+
+module.exports = {
+  babel: {
+    // / ...
+    plugins: [
+      // / ...
+      [
+        "@ladifire-opensource/babel-plugin-transform-stylex",
+        {
+          inject: true,
+        },
+      ],
+    ],
+  },
+  eslint: {
+    mode: ESLINT_MODES.file,
+  },
+};
+
+```
+
+### Install Style X
+
+npm install @ladifire-opensource/stylex
+
+npm install @ladifire-opensource/babel-plugin-transform-stylex
