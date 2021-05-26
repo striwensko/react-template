@@ -105,10 +105,12 @@ plugins: ["import", "react", "prettier", "@typescript-eslint"],
 }
 ```
 
-Add to package.json
+## Prepare to add Github Actions
+
+Add to package.json, so that we can run the linter and typescript check with
+github actions.
 
 ```
     "eslint": "eslint",
-
     "tsc" : "tsc"
 ```
