@@ -1,6 +1,3 @@
-// @author: somibuon, Duc Hoang
-// TODO: need more review
-
 import * as css from "csstype";
 
 type PseudoStyles = {
