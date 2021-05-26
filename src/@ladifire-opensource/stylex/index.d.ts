@@ -1,3 +1,9 @@
+/*
+ * Typescript definition updated to allow been able to detect which css rules
+ * were changed. This will allow us to limit the css properties a developer can
+ * change. For example a button might allow to change margins but not padding or
+ * any other css property
+ */
 import * as css from "csstype";
 
 type PseudoStyles = {
