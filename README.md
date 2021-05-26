@@ -114,3 +114,7 @@ github actions.
     "eslint": "eslint",
     "tsc" : "tsc"
 ```
+Now with Github Actions installed we can make sure that we run checks on the 
+code we are committing when we make a mistake if we view the commit we can see 
+the error popout with a UI similar to this:
+![image](https://user-images.githubusercontent.com/4765784/119687623-3693db80-bdfc-11eb-813a-8684f896c380.png)
